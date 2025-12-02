@@ -34,13 +34,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/auth/loginuser",
-							"protocol": "https",
+							"raw": "localhost:5000/tasky/auth/loginuser",
 							"host": [
-								"tasky-backend-1-j3aj",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "5000",
 							"path": [
 								"tasky",
 								"auth",
@@ -71,13 +69,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/auth/createuser",
-							"protocol": "https",
+							"raw": "localhost:5000/tasky/auth/createuser",
 							"host": [
-								"tasky-backend-1-j3aj",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "5000",
 							"path": [
 								"tasky",
 								"auth",
@@ -94,7 +90,7 @@
 						"header": [
 							{
 								"key": "auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg4Yjc0NDA4ZTQzNzY5NGU4MTNlYWU1In0sImlhdCI6MTc1Mzk4NTIwMH0.-vitVvNePStvsJwjjdvAGrEAaOOX3nlju1xejTMAmx4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkyZTk4MDY2NzUwNWY0ZTY0YzFkZDhkIn0sImlhdCI6MTc2NDcwMDk3NX0.LNa3s6VD7QqzNwwoUejyZX4jp0o-5aHzgswV8YqC31Q",
 								"type": "text"
 							}
 						],
@@ -108,13 +104,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/auth/getuser",
-							"protocol": "https",
+							"raw": "localhost:5000/tasky/auth/getuser",
 							"host": [
-								"tasky-backend-1-j3aj",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "5000",
 							"path": [
 								"tasky",
 								"auth",
@@ -136,7 +130,7 @@
 							},
 							{
 								"key": "auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg4Yjc0NDA4ZTQzNzY5NGU4MTNlYWU1In0sImlhdCI6MTc1Mzk4NTIwMH0.-vitVvNePStvsJwjjdvAGrEAaOOX3nlju1xejTMAmx4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkyZTk4MDY2NzUwNWY0ZTY0YzFkZDhkIn0sImlhdCI6MTc2NDcwMDk3NX0.LNa3s6VD7QqzNwwoUejyZX4jp0o-5aHzgswV8YqC31Q",
 								"type": "text"
 							}
 						],
@@ -150,13 +144,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/auth/updateuser/688be0f6122a27b683bb5d7a",
-							"protocol": "https",
+							"raw": "http://localhost:5000/tasky/auth/updateuser/688be0f6122a27b683bb5d7a",
+							"protocol": "http",
 							"host": [
-								"tasky-backend-1-j3aj",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "5000",
 							"path": [
 								"tasky",
 								"auth",
@@ -179,13 +172,12 @@
 							}
 						],
 						"url": {
-							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/auth/deleteuser/688d0728ed04a49116bad599",
-							"protocol": "https",
+							"raw": "http://localhost:5000/tasky/auth/deleteuser/688d0728ed04a49116bad599",
+							"protocol": "http",
 							"host": [
-								"tasky-backend-1-j3aj",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "5000",
 							"path": [
 								"tasky",
 								"auth",
@@ -212,17 +204,36 @@
 							"raw": "{\r\n  \"email\" : \"pv@mail.com\",\r\n  \"password\" : \"12345\"\r\n}"
 						},
 						"url": {
-							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/auth/getallusers",
-							"protocol": "https",
+							"raw": "http://localhost:5000/tasky/auth/getallusers",
+							"protocol": "http",
 							"host": [
-								"tasky-backend-1-j3aj",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "5000",
 							"path": [
 								"tasky",
 								"auth",
 								"getallusers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/tasky/auth/totalusers",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasky",
+								"auth",
+								"totalusers"
 							]
 						}
 					},
@@ -243,7 +254,7 @@
 						"header": [
 							{
 								"key": "auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg5MjcyZjRmOGM1NjQwYmZhOTg4MTY0In0sImlhdCI6MTc1NDQzMDkxMn0.fMj8Va0_XSqaOS2VjIV1vMPqDOdXElcka72viuGpN9M",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkyZTk4MDY2NzUwNWY0ZTY0YzFkZDhkIn0sImlhdCI6MTc2NDY2NTkwMH0.fLhrtFmwyGs5dlrj4KBGLQIYzy22ODk1TB84cCnnwy4",
 								"type": "text"
 							}
 						],
@@ -252,17 +263,16 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/tasks/fetchalltasks",
-							"protocol": "https",
+							"raw": "http://localhost:5000/tasky/project/fetchallproject",
+							"protocol": "http",
 							"host": [
-								"tasky-backend-1-j3aj",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "5000",
 							"path": [
 								"tasky",
-								"tasks",
-								"fetchalltasks"
+								"project",
+								"fetchallproject"
 							]
 						}
 					},
@@ -280,13 +290,13 @@
 							},
 							{
 								"key": "auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg4YmUwZjYxMjJhMjdiNjgzYmI1ZDdhIn0sImlhdCI6MTc1Mzk5NzYxOX0.bUoDtLDL0awbZOQFjGkRZ-qCOc106r-2gV6cUhF5s6g",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkyZTk4MDY2NzUwNWY0ZTY0YzFkZDhkIn0sImlhdCI6MTc2NDY2MzQ4Mn0.hH9G2GRliJGYHrgBm_Kb-wTGroiSXvBT0SoAq55-UVY",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"title\" : \"LR2\",\r\n  \"description\" : \"Linear Regression\",\r\n  \"status\" : \"C\",\r\n  \"priority\" : \"Y\",\r\n  \"assignedto\" : \"GK\"\r\n}",
+							"raw": "{\r\n  \"title\" : \"LR2\",\r\n  \"description\" : \"Linear Regression\",\r\n  \"status\" : \"C\",\r\n  \"priority\" : \"Y\",\r\n  \"duedate\" : \"12121212\",\r\n  \"enddate\" : \"ehr734589584\",\r\n  \"users\" : \"USER1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -294,17 +304,15 @@
 							}
 						},
 						"url": {
-							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/tasks/addtasks",
-							"protocol": "https",
+							"raw": "localhost:5000/tasky/project/addproject",
 							"host": [
-								"tasky-backend-1-j3aj",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "5000",
 							"path": [
 								"tasky",
-								"tasks",
-								"addtasks"
+								"project",
+								"addproject"
 							]
 						}
 					},
@@ -332,13 +340,13 @@
 							},
 							{
 								"key": "auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg4YmUwZjYxMjJhMjdiNjgzYmI1ZDdhIn0sImlhdCI6MTc1Mzk5NzYxOX0.bUoDtLDL0awbZOQFjGkRZ-qCOc106r-2gV6cUhF5s6g",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjkyZTk4MDY2NzUwNWY0ZTY0YzFkZDhkIn0sImlhdCI6MTc2NDY2NTkwMH0.fLhrtFmwyGs5dlrj4KBGLQIYzy22ODk1TB84cCnnwy4",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"title\" : \"LR2\",\r\n  \"description\" : \"Linear Regression with Lasso Regression\",\r\n  \"status\" : \"C\",\r\n  \"priority\" : \"Y\",\r\n  \"assignedto\" : \"GK\"\r\n}",
+							"raw": "{\r\n  \"user\": \"692e980667505f4e64c1dd8d\",\r\n            \"title\": \"dhfdhj 2222\",\r\n            \"description\": \"fgjfdgjkdfjgkf\",\r\n            \"status\": \"completed\",\r\n            \"priority\": \"IMPORTANT\",\r\n            \"duedate\": \"2025-12-26\",\r\n            \"enddate\": \"2025-12-10\",\r\n            \"users\": \"USER2\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -346,19 +354,17 @@
 							}
 						},
 						"url": {
-							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/tasks/updatetask/688be1be122a27b683bb5d8c/",
-							"protocol": "https",
+							"raw": "http://localhost:5000/tasky/project/updateproject/692eaab997beab9b342b75a6",
+							"protocol": "http",
 							"host": [
-								"tasky-backend-1-j3aj",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "5000",
 							"path": [
 								"tasky",
-								"tasks",
-								"updatetask",
-								"688be1be122a27b683bb5d8c",
-								""
+								"project",
+								"updateproject",
+								"692eaab997beab9b342b75a6"
 							]
 						}
 					},
@@ -398,6 +404,27 @@
 								"tasks",
 								"deletetask",
 								"688be1be122a27b683bb5d8c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total Number of projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/tasky/project/totalprojects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasky",
+								"project",
+								"totalprojects"
 							]
 						}
 					},
