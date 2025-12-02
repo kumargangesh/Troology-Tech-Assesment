@@ -65,9 +65,9 @@ export default function Login() {
           //toggleToShow(true);
           //setAlertMessage("User logged in succesfully...");
           setTimeout(() => {
-            if (json.user.role === 'admin') {
+            if (json.user.role === "admin") {
               navigate("/home");
-            } else if (json.user.role === 'normal') {
+            } else if (json.user.role === "normal") {
               navigate('/normal');
             }
             setUserAuth(json.authToken);

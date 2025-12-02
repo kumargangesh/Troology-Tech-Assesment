@@ -13,27 +13,27 @@ router.get("/fetchallproject", FetchUser, async (req, res) => {
 });
 
 router.post("/addproject", FetchUser, [
-    body("title").isLength({ min : 1 }),
-    body("description").isLength({ min : 1 }),
-    body("status").isLength({ min : 1 }),
-    body("priority").isLength({ min : 1 })
-], async(req, res) => {
+    body("title").isLength({ min: 1 }),
+    body("description").isLength({ min: 1 }),
+    body("status").isLength({ min: 1 }),
+    body("priority").isLength({ min: 1 })
+], async (req, res) => {
     const error = validationResult(req); // getting errors from validationResult
     if (!error.isEmpty()) return res.status(400).json({ error: error.array() });
     // returning status 400, with json message for errors received from errors array
 
     const { title, description, status, priority, duedate, enddate, users } = req.body;
 
-    try{
+    try {
         const task = new Tasks({ // creating a new note of a logged in user
-            title, description, status, priority, duedate, enddate, users, user : req.user.id // here user is the id of logged in User, getting from FetchUser, which is the middleware function
+            title, description, status, priority, duedate, enddate, users, user: req.user.id // here user is the id of logged in User, getting from FetchUser, which is the middleware function
         });
 
         const savedTask = await task.save();
 
-        res.status(200).json({savedTask});
-    }catch(error){
-        res.status(500).send({ error : error.message})
+        res.status(200).json({ savedTask });
+    } catch (error) {
+        res.status(500).send({ error: error.message })
     }
 });
 
@@ -103,6 +103,15 @@ router.delete("/deleteproject/:id", FetchUser, async (req, res) => {
 
     } catch (error) {
         res.status(500).send({ error: error.message })
+    }
+});
+
+router.get('/totalprojects', async (req, res) => {
+    try {
+        const tasks = await Tasks.find();
+        res.status(200).send(tasks.length);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
     }
 });
 

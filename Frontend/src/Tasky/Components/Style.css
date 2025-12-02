@@ -3,6 +3,18 @@
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
+.userandprojects{
+    display: flex;
+    border: 1px solid black;
+    padding: 1%;
+}
+
+.userandprojects div{
+    border: 1px solid black;
+    display: flex;
+    width: 30%;
+}
+
 
 @media(min-width : 350px) {
     .newtaskform {

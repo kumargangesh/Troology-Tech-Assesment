@@ -21,6 +21,9 @@ const TaskState = (props) => {
 
   const [impTasks, setImpTasks] = useState(tempImpTasks);
 
+  const [totalUser, setTotalUsers] = useState('');
+  const [totalProjects, setTotalProjects] = useState('');
+
   // fetching all the tasks
 
   const fetchAllTasks = async () => {
@@ -226,8 +229,18 @@ const TaskState = (props) => {
 
   }
 
+  const getAllUsers = async () => {
+    const response = await axios.post('http://localhost:5000/tasky/auth/totalusers');
+    setTotalUsers(response.data);
+  }
+
+  const getAllProjects =async() => {
+    const response = await axios.get('http://localhost:5000/tasky/project/totalprojects');
+    setTotalProjects(response.data);
+  }
+
   return (
-    <TaskContext.Provider value={{ tasks, addTask, updateTask, deleteTask, fetchAllTasks, alertMessage, setAlertMessage, toShow, toggleToShow, userAuth, setUserAuth, userEmail, setUserEmail, userType, setUserType, allUsers, setAllUsers, fetchAllUsers, deleteUser, updateUser, impTasks, setImpTasks }}>
+    <TaskContext.Provider value={{ tasks, addTask, updateTask, deleteTask, fetchAllTasks, alertMessage, setAlertMessage, toShow, toggleToShow, userAuth, setUserAuth, userEmail, setUserEmail, userType, setUserType, allUsers, setAllUsers, fetchAllUsers, deleteUser, updateUser, impTasks, setImpTasks, getAllUsers, getAllProjects, totalUser, totalProjects }}>
       {props.children}
     </TaskContext.Provider>
   )

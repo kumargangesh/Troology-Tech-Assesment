@@ -189,10 +189,20 @@ router.delete("/deleteuser/:id", async (req, res) => {
 // endpoint to delete user using DELETE request and endpoint "/tasky/auth/getallusers", login required
 
 router.post("/getallusers", async (req, res) => {
-  try{
+  try {
     const users = await User.find();
     res.status(200).send({ users });
-  }catch (err) {
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+router.post('/totalusers', async (req, res) => {
+  try {
+    const users = await User.find();
+    res.status(200).send(users.length);
+  } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
