@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import taskContext from '../Context/TaskContext';
 import validator from "validator";
 import "./UserAuth.css";
+import axios from "axios";
 
 export default function Signup() {
 
@@ -58,22 +59,36 @@ export default function Signup() {
       } else if (role.length < 5) {
         setErrorMessage("enter role bigger than 5 characters");
       } else {
-        // const response = await fetch("https://tasky-backend-1-j3aj.onrender.com/tasky/auth/createuser", {
-        const response = await fetch("http://localhost:5000/tasky/auth/createuser", {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ email, password, role })
-        });
+        // const response = await axios("http://localhost:5000/tasky/auth/createuser", {
+        //   method: "POST",
+        //   headers: {
+        //     'Content-Type': 'application/json'
+        //   },
+        //   body: JSON.stringify({ email, password, role })
+        // });
 
-        const json = await response.json();
+        const response = await axios.post(
+          "http://localhost:5000/tasky/auth/createuser",
+          { email, password, role }, // request body
+          {
+            headers: {
+              "Content-Type": "application/json"
+            }
+          }
+        );
+
+        const json = await response.data;
+
         if (json.success) {
           setErrorMessage(json.message);
           toggleToShow(true);
           setAlertMessage("User created successfully...");
           setTimeout(() => {
-            navigate("/home");
+            if (json.user.role === 'admin') {
+              navigate("/home");
+            } else if (json.user.role === 'normal') {
+              navigate('/normal');
+            }
             setUserAuth(json.authToken);
             setUserEmail(email);
             toggleToShow(false);

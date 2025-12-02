@@ -11,6 +11,7 @@ import Home from './Components/Home';
 import AllUsers from './Users/AllUsers';
 import taskContext from './Context/TaskContext';
 import Alert from './Components/Alert';
+import NormalUser from './Components/NormalUser';
 
 export default function Routing() {
 
@@ -26,6 +27,7 @@ export default function Routing() {
           <Route path='/' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/home' element={<Home />} />
+          <Route path='/normal' element={<NormalUser />} />
           <Route path='/users' element={<AllUsers />} />
         </Routes>
       </BrowserRouter>

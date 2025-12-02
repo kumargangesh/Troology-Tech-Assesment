@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import taskContext from '../Context/TaskContext';
 import validator from "validator";
 import "./UserAuth.css";
+import axios from "axios";
 
 export default function Login() {
 
@@ -36,16 +37,27 @@ export default function Login() {
         setErrorMessage("enter password bigger than 5 characters");
       } else {
         setErrorMessage("");
-        // const response = await fetch("https://tasky-backend-1-j3aj.onrender.com/tasky/auth/loginuser", {
-         const response = await fetch("http://localhost:5000/tasky/auth/loginuser", {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ email, password })
-        });
+        // const response = await fetch("http://localhost:5000/tasky/auth/loginuser", {
+        // const response = await axios("http://localhost:5000/tasky/auth/loginuser", {
+        //   method: "POST",
+        //   headers: {
+        //     'Content-Type': 'application/json'
+        //   },
+        //   body: JSON.stringify({ email, password })
+        // });
 
-        const json = await response.json();
+        const response = await axios.post(
+          "http://localhost:5000/tasky/auth/loginuser",
+          { email, password }, // request body
+          {
+            headers: {
+              "Content-Type": "application/json"
+            }
+          }
+        );
+
+
+        const json = await response.data;
 
         if (json.success) {
           setErrorMessage(json.message);
@@ -53,7 +65,11 @@ export default function Login() {
           //toggleToShow(true);
           //setAlertMessage("User logged in succesfully...");
           setTimeout(() => {
-            navigate("/home");
+            if (json.user.role === 'admin') {
+              navigate("/home");
+            } else if (json.user.role === 'normal') {
+              navigate('/normal');
+            }
             setUserAuth(json.authToken);
             setUserEmail(email);
             //toggleToShow(false);

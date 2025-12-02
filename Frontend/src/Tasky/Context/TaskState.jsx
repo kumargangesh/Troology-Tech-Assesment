@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import TaskContext from './TaskContext';
+import axios from "axios";
 
 const TaskState = (props) => {
 
@@ -23,15 +24,26 @@ const TaskState = (props) => {
   // fetching all the tasks
 
   const fetchAllTasks = async () => {
-    const response = await (fetch(`${host}/tasky/project/fetchallproject`, {
-      method: "GET",
-      headers: {
-        'Content-Type': 'application/json',
-        'auth-token': userAuth
-      }
-    }));
+    // const response = await (axios(`${host}/tasky/project/fetchallproject`, {
+    //   method: "GET",
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'auth-token': userAuth
+    //   }
+    // }));
 
-    const json = await response.json();
+    const response = await axios.get(
+      `${host}/tasky/project/fetchallproject`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "auth-token": userAuth
+        }
+      }
+    );
+
+
+    const json = await response.data;
     const allTasks = json.tasks;
     setTasks(allTasks);
 
@@ -52,10 +64,9 @@ const TaskState = (props) => {
   }
 
   const fetchAllUsers = async () => {
-    const response = await (fetch(`${host}/tasky/auth/getallusers`, {
-      method: "POST"
-    }));
-    const json = await response.json();
+    const response = await axios.post(`${host}/tasky/auth/getallusers`);
+
+    const json = await response.data;
     console.log(json);
     let allUsers = json.users;
     console.log('email: ');
@@ -76,18 +87,37 @@ const TaskState = (props) => {
 
     // alert();
     console.log(title, description, status, priority, duedate, enddate, users);
-    console.log(typeof(enddate));
+    console.log(typeof (enddate));
 
     // Now we are going to make API calls 
 
-    const response = await (fetch(`${host}/tasky/project/addproject`, {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json',
-        'auth-token': userAuth
+    // const response = await (axios(`${host}/tasky/project/addproject`, {
+    //   method: "POST",
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'auth-token': userAuth
+    //   },
+    //   body: JSON.stringify({ title, description, status, priority, duedate, enddate, users })
+    // }));
+
+    const response = await axios.post(
+      `${host}/tasky/project/addproject`,
+      {
+        title,
+        description,
+        status,
+        priority,
+        duedate,
+        enddate,
+        users
       },
-      body: JSON.stringify({ title, description, status, priority, duedate, enddate, users })
-    }));
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "auth-token": userAuth
+        }
+      }
+    );
 
   }
 
@@ -97,14 +127,34 @@ const TaskState = (props) => {
 
     // Now we are going to make API calls 
 
-    const response = await (fetch(`${host}/tasky/project/updateproject/${id}`, {
-      method: "PUT",
-      headers: {
-        'Content-Type': 'application/json',
-        'auth-token': userAuth
+    // const response = await (axios(`${host}/tasky/project/updateproject/${id}`, {
+    //   method: "PUT",
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'auth-token': userAuth
+    //   },
+    //   body: JSON.stringify({ title, description, status, priority, duedate, enddate, users })
+    // }));
+
+    const response = await axios.put(
+      `${host}/tasky/project/updateproject/${id}`,
+      {
+        title,
+        description,
+        status,
+        priority,
+        duedate,
+        enddate,
+        users
       },
-      body: JSON.stringify({ title, description, status, priority, duedate, enddate, users })
-    }));
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "auth-token": userAuth
+        }
+      }
+    );
+
 
   }
 
@@ -112,24 +162,42 @@ const TaskState = (props) => {
 
   const deleteTask = async (id) => {
 
-    const response = await (fetch(`${host}/tasky/project/deleteproject/${id}`, {
-      method: "DELETE",
-      headers: {
-        'Content-Type': 'application/json',
-        'auth-token': userAuth
-      }
-    }));
+    // const response = await (axios(`${host}/tasky/project/deleteproject/${id}`, {
+    //   method: "DELETE",
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'auth-token': userAuth
+    //   }
+    // }));
 
-    const json = response.json();
+    const response = await axios.delete(
+      `${host}/tasky/project/deleteproject/${id}`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "auth-token": userAuth
+        }
+      }
+    );
+
+    const json = response.data;
     const newTasks = tasks.filter((task) => { return task._id !== id })
     setNotes(newTasks)
   }
 
   const deleteUser = async (id) => {
-    const response = await (fetch(`${host}/tasky/auth/deleteuser/${id}`, {
+    // const response = await (axios(`${host}/tasky/auth/deleteuser/${id}`, {
+    //   method: "DELETE"
+    // }));
+    // const json = await response.json();
+    // console.log(json.message);
+
+    const response = await axios({
+      url: `${host}/tasky/auth/deleteuser/${id}`,
       method: "DELETE"
-    }));
-    const json = await response.json();
+    });
+
+    const json = await response.data;
     console.log(json.message);
   }
 
@@ -138,13 +206,24 @@ const TaskState = (props) => {
     // Now we are going to make API calls 
     // alert("id to updtae: "+id);
 
-    const response = await (fetch(`${host}/tasky/project/updatetask/${id}`, {
-      method: "PUT",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ role })
-    }));
+    // const response = await (axios(`${host}/tasky/project/updatetask/${id}`, {
+    //   method: "PUT",
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify({ role })
+    // }));
+
+    const response = await axios.put(
+      `${host}/tasky/project/updatetask/${id}`,
+      { role }, // request body
+      {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    );
+
   }
 
   return (
