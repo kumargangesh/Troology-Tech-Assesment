@@ -535,7 +535,9 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="userandprojects">
+                <h1>Dashboard:</h1>
+
+                <div className="userandprojects d-flex justify-content-between">
                   <div>
                     <center><h3>Total Users : </h3></center>
                     <h4>{totalUser}</h4>
