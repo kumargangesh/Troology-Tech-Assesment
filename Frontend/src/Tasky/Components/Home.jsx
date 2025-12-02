@@ -133,7 +133,7 @@ export default function Home() {
 
   useEffect(() => {
     fetchAllTasks();
-    fetchAllUsers();
+    // fetchAllUsers();
     getAllUsers();
     getAllProjects();
     // loadChangedPages();
