@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "a9ca55b8-f9e7-4906-a520-c6dc75392219",
+		"name": "Project-MERN-Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47227026",
+		"_collection_link": "https://kumargangesh090-5689889.postman.co/workspace/kumargangesh's-Workspace~652af714-3f00-42bd-8b04-c8a5b4824621/collection/47227026-a9ca55b8-f9e7-4906-a520-c6dc75392219?action=share&source=collection_link&creator=47227026"
+	},
+	"item": [
+		{
+			"name": "taskyUsers",
+			"item": [
+				{
+					"name": "Login User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\" : \"gangesh@mail.com\",\r\n  \"password\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/auth/loginuser",
+							"protocol": "https",
+							"host": [
+								"tasky-backend-1-j3aj",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"tasky",
+								"auth",
+								"loginuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\" : \"ka@mail.com\",\r\n  \"password\" : \"12345\",\r\n  \"role\" : \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/auth/createuser",
+							"protocol": "https",
+							"host": [
+								"tasky-backend-1-j3aj",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"tasky",
+								"auth",
+								"createuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetching User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg4Yjc0NDA4ZTQzNzY5NGU4MTNlYWU1In0sImlhdCI6MTc1Mzk4NTIwMH0.-vitVvNePStvsJwjjdvAGrEAaOOX3nlju1xejTMAmx4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/auth/getuser",
+							"protocol": "https",
+							"host": [
+								"tasky-backend-1-j3aj",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"tasky",
+								"auth",
+								"getuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg4Yjc0NDA4ZTQzNzY5NGU4MTNlYWU1In0sImlhdCI6MTc1Mzk4NTIwMH0.-vitVvNePStvsJwjjdvAGrEAaOOX3nlju1xejTMAmx4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" : \"123456\", \r\n    \"role\" : \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/auth/updateuser/688be0f6122a27b683bb5d7a",
+							"protocol": "https",
+							"host": [
+								"tasky-backend-1-j3aj",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"tasky",
+								"auth",
+								"updateuser",
+								"688be0f6122a27b683bb5d7a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg4Yjc0NDA4ZTQzNzY5NGU4MTNlYWU1In0sImlhdCI6MTc1Mzk4NTIwMH0.-vitVvNePStvsJwjjdvAGrEAaOOX3nlju1xejTMAmx4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/auth/deleteuser/688d0728ed04a49116bad599",
+							"protocol": "https",
+							"host": [
+								"tasky-backend-1-j3aj",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"tasky",
+								"auth",
+								"deleteuser",
+								"688d0728ed04a49116bad599"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\" : \"pv@mail.com\",\r\n  \"password\" : \"12345\"\r\n}"
+						},
+						"url": {
+							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/auth/getallusers",
+							"protocol": "https",
+							"host": [
+								"tasky-backend-1-j3aj",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"tasky",
+								"auth",
+								"getallusers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "taskyTasks",
+			"item": [
+				{
+					"name": "Fetch All Projects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg5MjcyZjRmOGM1NjQwYmZhOTg4MTY0In0sImlhdCI6MTc1NDQzMDkxMn0.fMj8Va0_XSqaOS2VjIV1vMPqDOdXElcka72viuGpN9M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/tasks/fetchalltasks",
+							"protocol": "https",
+							"host": [
+								"tasky-backend-1-j3aj",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"tasky",
+								"tasks",
+								"fetchalltasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new Project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg4YmUwZjYxMjJhMjdiNjgzYmI1ZDdhIn0sImlhdCI6MTc1Mzk5NzYxOX0.bUoDtLDL0awbZOQFjGkRZ-qCOc106r-2gV6cUhF5s6g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\" : \"LR2\",\r\n  \"description\" : \"Linear Regression\",\r\n  \"status\" : \"C\",\r\n  \"priority\" : \"Y\",\r\n  \"assignedto\" : \"GK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/tasks/addtasks",
+							"protocol": "https",
+							"host": [
+								"tasky-backend-1-j3aj",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"tasky",
+								"tasks",
+								"addtasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Project",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " */*",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": " Thunder Client (https://www.thunderclient.com)",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg4YmUwZjYxMjJhMjdiNjgzYmI1ZDdhIn0sImlhdCI6MTc1Mzk5NzYxOX0.bUoDtLDL0awbZOQFjGkRZ-qCOc106r-2gV6cUhF5s6g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\" : \"LR2\",\r\n  \"description\" : \"Linear Regression with Lasso Regression\",\r\n  \"status\" : \"C\",\r\n  \"priority\" : \"Y\",\r\n  \"assignedto\" : \"GK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/tasks/updatetask/688be1be122a27b683bb5d8c/",
+							"protocol": "https",
+							"host": [
+								"tasky-backend-1-j3aj",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"tasky",
+								"tasks",
+								"updatetask",
+								"688be1be122a27b683bb5d8c",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Project",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " */*",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": " Thunder Client (https://www.thunderclient.com)",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg4YmUwZjYxMjJhMjdiNjgzYmI1ZDdhIn0sImlhdCI6MTc1Mzk5NzYxOX0.bUoDtLDL0awbZOQFjGkRZ-qCOc106r-2gV6cUhF5s6g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://tasky-backend-1-j3aj.onrender.com/tasky/tasks/deletetask/688be1be122a27b683bb5d8c",
+							"protocol": "https",
+							"host": [
+								"tasky-backend-1-j3aj",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"tasky",
+								"tasks",
+								"deletetask",
+								"688be1be122a27b683bb5d8c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
