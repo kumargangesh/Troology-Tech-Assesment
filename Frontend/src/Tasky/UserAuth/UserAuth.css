@@ -1,0 +1,208 @@
+.userlogin:hover, .usersignup:hover{
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+@media(min-width : 300px) {
+
+    .loginButton {
+        width: 120px;
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    .userlogin {
+        margin-top: 18%;
+        /* border: 1px solid black; */
+    }
+
+    .userlogin h1 {
+        font-size: 35px;
+        font-weight: bolder;
+        margin-left: 5%;
+    }
+
+    .login {
+        /* border: 1px solid black; */
+        width: 90%;
+        margin: 8% auto;
+    }
+
+    .login input {
+        margin-top: 2%;
+        padding: 3% 5%;
+    }
+
+    .usersignup {
+        /* border: 1px solid black; */
+        margin-top: 12%;
+    }
+
+    .usersignup h1 {
+        font-size: 35px;
+        font-weight: bolder;
+        margin-left: 5%;
+    }
+
+    .login {
+        /* border: 1px solid black; */
+        width: 90%;
+        margin: 8% auto;
+    }
+
+    .login input {
+        margin-top: 2%;
+        padding: 3% 5%;
+    }
+
+    .buttons {
+        /* border: 1px solid black; */
+        width: "80%";
+        padding : ".5%"
+    }
+
+    .buttons button{
+        width: 40%;
+        height: 60px;
+    }
+}
+
+@media(min-width : 600px) {
+
+    .login {
+        margin-top: 20px;
+    }
+
+    .loginButton {
+        width: 140px;
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    .userlogin {
+        margin-top: 18%;
+        /* border: 1px solid black; */
+    }
+
+    .userlogin h1 {
+        font-size: 35px;
+        font-weight: bolder;
+        margin-left: 5%;
+    }
+
+    .login {
+        /* border: 1px solid black; */
+        width: 90%;
+        margin: 8% auto;
+    }
+
+    .login input {
+        margin-top: 2%;
+        padding: 3% 5%;
+    }
+
+    .usersignup {
+        /* border: 1px solid black; */
+        margin-top: 12%;
+    }
+
+    .usersignup h1 {
+        font-size: 35px;
+        font-weight: bolder;
+        margin-left: 5%;
+    }
+
+    .login {
+        /* border: 1px solid black; */
+        width: 90%;
+        margin: 8% auto;
+    }
+
+    .login input {
+        margin-top: 2%;
+        padding: 3% 5%;
+    }
+
+    .buttons {
+        /* border: 1px solid black; */
+        width: "80%";
+        padding : ".5%"
+    }
+}
+
+@media(min-width : 900px) {
+
+    /* .login {
+        margin-top: 20px;
+    }
+
+    .loginButton {
+        width: 120px;
+        height: 50px;
+        margin-top: 10px;
+    } */
+
+    .userlogin {
+        margin-top: 3%;
+        /* border: 1px solid black; */
+        width: 80%;
+        margin: 4% auto;
+    }
+
+    .userlogin h1 {
+        font-size: 35px;
+        font-weight: bolder;
+        margin-left: 5%;
+    }
+
+    .login {
+        /* border: 1px solid black; */
+        width: 90%;
+        margin: 1% auto;
+    }
+
+    /* .login label{
+        margin-left: 5%;
+    } */
+
+    .login input {
+        /* width: 80%; */
+        padding: 1% 2%;
+        margin-top: 1%;
+    }
+
+    .usersignup {
+        /* border: 1px solid black; */
+        margin-top: 5%;
+        width: 80%;
+        margin: 5% auto;
+    }
+
+    .usersignup h1 {
+        font-size: 35px;
+        font-weight: bolder;
+        margin-left: 5%;
+    }
+
+    .login {
+        /* border: 1px solid black; */
+        width: 90%;
+        margin: 1% auto;
+    }
+
+    .login input {
+        padding: 1% 2%;
+        margin-top: 1%;
+    }
+
+    .buttons {
+        /* border: 1px solid black; */
+        padding : ".5%";
+        width: 40%;
+    }
+
+    .buttons button{
+        width: 40%;
+        height: 60px;
+    }
+}

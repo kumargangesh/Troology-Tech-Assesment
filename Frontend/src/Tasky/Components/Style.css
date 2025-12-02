@@ -1,0 +1,263 @@
+.addnewtask:hover{
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+@media(min-width : 350px) {
+    .newtaskform {
+        /* border: 1px solid black; */
+        padding: .5%;
+        margin-top: 5%;
+    }
+
+    .newtaskform h3 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .addnewtask {
+        border: "1px solid black";
+    }
+
+    .addnewtask label {
+        font-weight: bold;
+    }
+
+    .stapri {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttons {
+        /* border: 1px solid black; */
+        margin: 3% auto;
+        width: 90%;
+    }
+
+    .priority {
+        /* border: 1px solid black; */
+        margin-top: 3%;
+        width: 90%;
+    }
+
+    .priority button {
+        border: 1px solid black;
+        margin: 2% auto;
+        width: 60%;
+    }
+
+    .ddassi {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ddassi .date {
+        width: 40%;
+    }
+
+    .assign {
+        width: 70%;
+        height: 50px;
+    }
+
+    .addtaskbutton {
+        width: 40%;
+        height: 60px;
+    }
+
+    .imptaskbuttons{
+        /* border: 1px solid black; */
+        display: flex;
+        width: 90%;
+        padding: 2%;
+        margin: 2% auto;
+    }
+
+    .imptaskbuttons button{
+        width: 40%;
+        height: 50px;
+    }
+
+    .prtask{
+        margin-top: 10%;
+    }
+}
+
+@media(min-width : 600px) {
+    .newtaskform {
+        /* border: 1px solid black; */
+        padding: .5%;
+        margin-top: 5%;
+    }
+
+    .newtaskform h3 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .addnewtask {
+        border: "1px solid black";
+    }
+
+    .addnewtask label {
+        font-weight: bold;
+    }
+
+    .stapri {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttons {
+        /* border: 1px solid black; */
+        margin: 3% auto;
+        width: 90%;
+    }
+
+    .priority {
+        /* border: 1px solid black; */
+        margin-top: 3%;
+        width: 90%;
+    }
+
+    .priority button {
+        border: 1px solid black;
+        margin: 2% auto;
+        width: 60%;
+    }
+
+    .ddassi {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ddassi .date {
+        width: 40%;
+    }
+
+    .assign {
+        width: 70%;
+        height: 50px;
+    }
+
+    .addtaskbutton {
+        width: 40%;
+        height: 60px;
+    }
+
+    .imptaskbuttons{
+        /* border: 1px solid black; */
+        display: flex;
+        width: 90%;
+        padding: 2%;
+        margin: 2% auto;
+    }
+
+    .imptaskbuttons button{
+        width: 40%;
+        height: 50px;
+    }
+}
+
+@media(min-width : 900px) {
+    .newtaskform {
+        /* border: 1px solid black; */
+        padding: .5%;
+        /* width: 60%; */
+        margin: 1% auto;
+    }
+
+    .newtaskform h3 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-left: 20%;
+    }
+
+    .addnewtask {
+        /* border: 1px solid black; */
+        width: 60%;
+        margin: 1% auto;
+    }
+
+    .addnewtask label {
+        font-weight: bold;
+    }
+
+    .stapri {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .statusandpri {
+        /* border: 1px solid black; */
+        width: 80%;
+        padding: 1%;
+    }
+
+    .buttons {
+        /* border: 1px solid black; */
+        margin: 3% auto;
+        width: 70%;
+        margin-left: 1%;
+    }
+
+    .priority {
+        /* border: 1px solid black; */
+        /* margin-top: 3%; */
+        width: 70%;
+        margin-top: 13px;
+    }
+
+    /* .priority button{
+    border: 1px solid black;
+    margin: 2% auto;
+    width: 60%;
+} */
+
+    .ddassi {
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ddassi label{
+        margin-left: 2%;
+    }
+
+    .ddassi div{
+        /* border: 1px solid black; */
+        width: 50%;
+    }
+
+    .ddassi .date {
+        /* border: 1px solid black; */
+        margin-left: 2%;
+        width: 50%;
+    }
+
+    .assign {
+        /* border: 1px solid black; */
+        width: 90%;
+        height: 50px;
+    }
+
+    .addtaskbutton {
+        width: 20%;
+        height: 50px;
+        
+    }
+
+    .imptaskbuttons{
+        /* border: 1px solid black; */
+        display: flex;
+        width: 60%;
+        padding: 2%;
+        margin: 2% auto;
+    }
+
+    .imptaskbuttons button{
+        width: 30%;
+        height: 60px;
+    }
+}

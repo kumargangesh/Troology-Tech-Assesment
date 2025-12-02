@@ -1,0 +1,68 @@
+.icons{
+    /* border: 1px solid black; */
+}
+
+.icons i{
+    padding: 5%;
+}
+
+.icons i:hover{
+    border: 1px solid black;
+    border-radius: 500px;
+}
+
+.inditask:hover{
+    transition: 1s;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+@media(min-width : 350px){
+    .stapri{
+        /* border: 1px solid black; */
+    }
+
+    .stapri button{
+        /* border: 1px solid black; */
+        width: 30%;
+    }
+
+    .dateassign{
+        /* border: 1px solid black; */
+    }
+}
+
+@media(min-width : 600px){
+    .stapri{
+        /* border: 1px solid black; */
+    }
+
+    .dateassign{
+        /* border: 1px solid black; */
+    }
+}
+
+@media(min-width : 900px){
+    .stapri{
+        /* border: 1px solid black; */
+        margin-top: 8%;
+    }
+
+    .stapri button{
+        width: 40%;
+        height: 60px;
+    }
+
+    .dateassign{
+        margin-top: 5%;
+        /* border: 1px solid black; */
+    }
+
+    .dateassign .duedate, .assign{
+        /* border: 1px solid black; */
+    }
+    
+    .dateassign .assign{
+        width: 40%;
+    }
+}
