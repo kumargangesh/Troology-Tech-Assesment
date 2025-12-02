@@ -553,7 +553,7 @@ export default function Home() {
                   impTasks.length > 0 ?
                     <div className="prtask">
                       <div className="container">
-                        <u><h2>Priority Tasks: </h2></u>
+                        <u><h2>Priority Projects: </h2></u>
                         <div className="row">
                           {
                             impTasks.slice(previousImp, nextImp).map((task) => {
@@ -591,7 +591,7 @@ export default function Home() {
                       <u><h2 style={{
                         marginTop: "3%",
                         marginBottom: "3%"
-                      }}>Available Tasks: </h2></u>
+                      }}>Normal Projects: </h2></u>
                       <div className="row">
                         {
                           tasks.slice(previousCommon, nextCommon).map((task) => {
